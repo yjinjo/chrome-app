@@ -1,25 +1,19 @@
 // app.js
 
-// without arrays
-const mon = "mon";
-const tue = "tue";
-const wed = "wed";
-const thu = "thu";
-const fri = "fri";
-const sat = "sat";
-const sun = "sun";
+const player = {
+  name: "nico",
+  points: 10,
+  fat: true
+}
 
-const daysOfWeek = mon + tue + wed + thu + fri + sat + sun
+console.log(player);
+console.log(player.name);
 
-// console.log(daysOfWeek);  // montuewedthufrisatsun
+player.fat = false;
+console.log(player);
 
-// with arrays
-const daysOfWeekArray = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
-console.log(daysOfWeekArray);
+player.lastName = "potato";
+console.log(player);
 
-// Get Item from Array
-console.log(daysOfWeekArray[4]);
-
-// Add one more day to the array
-daysOfWeekArray.push("new");
-console.log(daysOfWeekArray);
+player.points += 15;
+console.log(player);
