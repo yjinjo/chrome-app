@@ -1,5 +1,4 @@
 // app.js
 
-const title = document.getElementById("title");
-console.dir(title);
-console.log(title.className);
+const title = document.querySelector(".hello h1:first-child");
+console.log(title);
