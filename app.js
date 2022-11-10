@@ -1,19 +1,17 @@
 // app.js
 
-const player = {
-  name: "nico",
-  points: 10,
-  fat: true
+function add(a, b) {
+  console.log(a + b);
 }
 
-console.log(player);
+const player = {
+  name: "nico",
+  sayHello: function(otherPersonName) {
+     console.log("hello " + otherPersonName + ". Nice to meet you");
+  }
+}
+
+add(4, 2);
 console.log(player.name);
-
-player.fat = false;
-console.log(player);
-
-player.lastName = "potato";
-console.log(player);
-
-player.points += 15;
-console.log(player);
+player.sayHello("lynn");
+player.sayHello("nico");
