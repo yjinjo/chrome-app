@@ -1,17 +1,22 @@
 // app.js
 
-function add(a, b) {
-  console.log(a + b);
-}
-
-const player = {
-  name: "nico",
-  sayHello: function(otherPersonName) {
-     console.log("hello " + otherPersonName + ". Nice to meet you");
+const calculator = {
+  plus: function(a, b) {
+    return a + b;
+  },
+  minus: function(a, b) {
+    return a - b;
+  },
+  power: function(a, b) {
+    return a ** b;
   }
 }
 
-add(4, 2);
-console.log(player.name);
-player.sayHello("lynn");
-player.sayHello("nico");
+
+const age = 96;
+function calculateKorAge(ageOfForeigner) {
+  return ageOfForeigner + 2;
+}
+
+const korAge = calculateKorAge(age);
+console.log(korAge);
