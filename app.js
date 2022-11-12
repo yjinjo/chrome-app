@@ -2,20 +2,17 @@
 
 const loginForm = document.querySelector("#login-form")
 const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
 
-const link = document.querySelector("a");
+const HIDDEN_CLASSNAME = "hidden";
 
 function onLoginSubmit(event) {
   event.preventDefault();
-  console.log(loginInput.value);
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  const username = loginInput.value;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+  greeting.innerText = `Hello ${username}`
 }
 
-function handleLinkClick(event) {
-  event.preventDefault();
-  console.log(event);
-  alert("clicked!!");
-}
 
 loginForm.addEventListener("submit", onLoginSubmit);
-// JS는 누군가 링크를 클릭할 때 인자에 해당하는 함수를 실행할 것이다. 
-link.addEventListener("click", handleLinkClick);
